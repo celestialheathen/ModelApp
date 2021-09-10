@@ -1,0 +1,22 @@
+<%= form_with(model: landlord) do |form| %>
+  <% if landlord.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(landlord.errors.count, "error") %> prohibited this landlord from being saved:</h2>
+
+      <ul>
+        <% landlord.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

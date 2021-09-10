@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @landlord.name %>
+</p>
+
+<p>List of tenants</p>
+
+<% @landlord.tenants.each do |tenant| %>
+  <ul>
+    <li>Name: <%= tenant.name %></li>
+    <li>Monthly rent: <%= tenant.rent %></li>
+    <li>Total term: <%= tenant.term %></li>
+  </ul>
+<% end %>
+
+
+<%= link_to 'Edit', edit_landlord_path(@landlord) %> |
+<%= link_to 'Back', landlords_path %>

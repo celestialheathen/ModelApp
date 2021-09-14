@@ -17,5 +17,10 @@ matt.landlords << michelle
 matt.landlords << eric
 aaron.landlords << ian
 
+chase = Custodian.create!(name: "Chase", tenant_id: gabe.id, specialty: "electrical")
+raza = Custodian.create!(name: "Raza", tenant_id: jahaira.id, specialty: "plumbing")
+annie = Custodian.create!(name: "Annie", tenant_id: max.id, specialty: "electrical")
+michelle = Custodian.create!(name: "Michelle", tenant_id: matt.id, specialty: "general")
+justin = Custodian.create!(name: "Justin", specialty: "general")
 
 puts "Successfully seeded"

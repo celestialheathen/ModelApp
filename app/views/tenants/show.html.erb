@@ -13,6 +13,13 @@
   </ul>
 <% end %>
 
+<p>Custodian</p>
+<% if @tenant.custodian %>
+  <p><%= @tenant.custodian.name %></p>
+<% else %>
+  <p>No Custodian Assigned</p>
+<% end %>
+
 
 <%= link_to 'Edit', edit_tenant_path(@tenant) %> |
 <%= link_to 'Back', tenants_path %>

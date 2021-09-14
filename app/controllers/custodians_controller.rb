@@ -3,7 +3,8 @@ class CustodiansController < ApplicationController
 
   # GET /custodians or /custodians.json
   def index
-    @custodians = Custodian.all
+    # @custodians = Custodian.all
+    @custodians = Custodian.available
   end
 
   # GET /custodians/1 or /custodians/1.json
